@@ -40,8 +40,6 @@ public class CameraController : MonoBehaviour
         _movement = HandleKeyboardMovement(_movement);
         _movement = HandleMouseMovement(_movement);
         _controller.Move(Quaternion.Euler(0, CameraFollowTarget.eulerAngles.y, 0)*_movement * movementSpeed * Time.deltaTime);
-        
-        //CameraFollowTarget.position += Quaternion.Euler(0, CameraFollowTarget.eulerAngles.y, 0) * _movement * movementSpeed * Time.deltaTime;
     }
 
     private void RotateAround(float angle)
